@@ -11,5 +11,3 @@ I hope you like it. thank you!
 The author whispered beep:
   喜欢麻烦给个星星⭐支持一下~
   Like trouble to give a star⭐ support~
-  
-------------------------------------------------------------------------------Tim---------------------------------------
