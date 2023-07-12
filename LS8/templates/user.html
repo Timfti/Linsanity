@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <style>
+        .s1{
+            opacity: 1;
+            animation-name: s;
+            animation-duration: 1.5s;
+            transition: .25s;
+        }
+
+        .s2{
+            opacity: 1;
+            animation-name: s1;
+            /* animation-delay: 1s; */
+            animation-duration: 1.5s;
+            transition: .25s;
+        }
+
+        .s3{
+            opacity: 1;
+            animation-name: s2;
+            /* animation-delay: 2s; */
+            animation-duration: 1.5s;
+            transition: .25s;
+        }
+        
+        @keyframes s {
+            0%{
+                opacity: 0;
+                margin-left: 30%;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes s1 {
+            0%{
+                opacity: 0;
+                margin-left: 40%;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes s2 {
+            0%{
+                opacity: 0;
+                margin-left: 60%;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <!-- <h1>抽奖结果:{{jg}}</h1> -->
+        <box style="position: absolute; top: 20%; margin: -50px 0 0 0; left: 0; right: 0; font-size: 2rem;">
+            <h1 class="s1" style="font-weight: 300;">🎉恭喜<span style="font-weight: 600;">{{jg1}}</span>🥇一等奖</h1>
+            <h1 class="s2" style="font-weight: 300;">🎉恭喜<span style="font-weight: 600;">{{jg2}}</span>🥈二等奖</h1>
+            <h1 class="s3" style="font-weight: 300;">🎉恭喜<span style="font-weight: 600;">{{jg3}}</span>🥉三等奖</h1>
+            <form action="/user" method="post">
+                <input type="submit" value="抽奖" style="color: #fff; text-decoration: none; background: #333; padding: 20px; border-radius: 16px; width: 20vw; font-size: 1.5rem;">
+            </form>
+        </box>
+        <text style="position: absolute; bottom: 0; left: 0; right: 0;">
+            试试<a href="/" style="font-weight: 600; color: rgb(95, 95, 95); text-decoration: none; padding-right: 10px; padding-left: 10px;">添加名单</a>吧
+        </text>
+    </center>
+</body>
+</html>

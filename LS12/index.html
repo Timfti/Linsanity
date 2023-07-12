@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>导航浮动弹出菜单</title>
+<style>
+div{
+    border-radius:10px;
+}
+
+.menu_bt_h{
+    width:200px; 
+    height:50px; 
+    cursor:pointer; 
+    background-color:#050; 
+    text-align:center; 
+    line-height:50px; 
+    font-size:18px; 
+    color:#fff;
+}
+
+.menu_item_h{ 
+    width:200px; 
+    height:50px; 
+    margin-left:10px;
+    position:relative; 
+    background-color:#F80; 
+    top:-50px; left:200px; 
+    z-index:999; 
+    display:none;
+}
+
+.menu_bt_h:hover .menu_item_h{ 
+    display:block;
+}
+
+.trans_fadeout{
+   -webkit-transition:all 0.5s linear;
+   -moz-transition:all 0.5s linear;
+   -ms-transition:all 0.5s linear;
+   -o-transition:all 0.5s linear;
+   transition:all 0.5s linear;
+}
+
+.menu_btn_v{
+    width:200px; 
+    height:50px; 
+    cursor:pointer; 
+    background-color:#050; 
+    text-align:center; 
+    line-height:50px; 
+    font-size:18px; 
+    color:#fff;
+}
+
+.menu_item_v{
+    width:200px;
+    height:50px;
+    margin-top:10px;
+    margin-left:0px;
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    background-color:#F80;
+}
+
+.menu_btn_v:hover .menu_item_v{
+    visibility:visible;
+    opacity:1;
+}
+</style>
+</head>
+<body>
+<div class="menu_bt_h">导航菜单_水平
+    <div class="menu_item_h">弹出菜单_水平</div>
+</div>
+&nbsp;
+<div class="menu_btn_v">导航菜单_竖直
+    <div class="menu_item_v trans_fadeout">弹出菜单_竖直</div>
+</div>
+</body>
+</html>

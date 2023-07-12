@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>���·���</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url(https://img.tujidu.com/image/620b60be4548b.jpg);
+        }
+
+        h1 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        span {}
+
+        .header {
+            margin: 0 auto;
+            width: 1460px;
+            margin-top: 10px;
+            font-size: 30px;
+            padding: 20px 10px 20px 10px;
+            color: rgba(255, 255, 255, .8);
+            background-color: rgba(255, 255, 255, .25);
+            box-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700px;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0 20px;
+            text-align: center;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        .title {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .sr-only {
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .typecho-post-area input.title {
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+
+        .w-100 {
+            width: 487.2px;
+            height: 35.2px;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        textarea {
+            background: #FFF;
+            border: 1px solid #D9D9D6;
+            padding: 7px;
+            border-radius: 2px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        button,
+        input {
+            line-height: normal;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            margin: 0;
+        }
+
+        /* �û�������ʽ�� */
+        input[type="text"] {
+            padding: 1px 2px;
+        }
+
+        /* �û�������ʽ�� */
+        input {
+            text-rendering: auto;
+            color: -internal-light-dark(black, white);
+            letter-spacing: normal;
+            word-spacing: normal;
+            line-height: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            appearance: auto;
+            -webkit-rtl-ordering: logical;
+            cursor: text;
+            background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+            margin: 0em;
+            padding: 1px 2px;
+            border-width: 2px;
+            border-style: inset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+        }
+
+        textarea {
+            /* width: 1000px;
+            height: 800px; */
+            margin: 0 auto;
+            margin-top: 10px;
+            font-size: 30px;
+            /* padding: 20px 10px 20px 10px; */
+            color: rgba(255, 255, 255, .8);
+            background-color: rgba(255, 255, 255, .25);
+            box-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            /* border: 1px solid #ededed;
+            border: 1px solid orange; */
+            /* text-align: center; */
+        }
+
+        #ke-textarea {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background-color: #FFFFFF;
+            color: #000;
+            font-size: 15px;
+            font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+            line-height: 18px;
+            overflow: auto;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#">悦杰源码</a>
+        <a href="#">首页</a>
+        <a href="#">文章</a>
+        <a href="#">社区</a>
+    </div>
+
+    <div class="wz_bx">
+        <h1>社区签到</h1>
+        <center>
+            <p class="title">
+                <label for="title" class="sr-only">今日感言</label>
+                <input type="text" id="title" name="title" autocomplete="off" value placeholder="今日感言"
+                    class="w-100 text title"
+                    style="color: rgba(255, 255, 255, .8);background-color: rgba(255, 255, 255, .25);">
+                <span>
+                    <i class="fa-solid fa-align-center"></i>
+                    <i class="fa-solid fa-align-justify"></i>
+                    <i class="fa-solid fa-align-right"></i>
+                </span>
+            </p>
+            <div>
+                <!-- <input type="text" class="z_k" value placeholder="�༭�ı�"> -->
+                <!-- <textarea class="ke-textarea" style="display: none; height: 291px;" value placeholder="�༭�ı�"></textarea> -->
+                <textarea style="width:800px;height:500px; color: rgba(255, 255, 255, .8);
+                background-color: rgba(255, 255, 255, .25); padding-left: 20px; 
+                padding: 20px 20px 20px 20px;" id="ke-textarea"></textarea>
+            </div>
+        </center>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "preload": "preload.js",
+  "logo": "logo.png",
+  "features": [
+    {
+      "code": "wec",
+      "explain": "登录网页微信并发送给联系人",
+      "cmds": [
+        {
+          "type": "over",
+          "label": "发送给微信联系人"
+        },
+        {
+          "type": "img",
+          "label": "发送给微信联系人"
+        },
+        {
+          "type": "files",
+          "fileType": "file",
+          "label": "发送给微信联系人"
+        }
+      ]
+    }
+  ]
+}

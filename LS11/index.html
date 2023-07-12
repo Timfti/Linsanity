@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--定义弹窗的样式-->
+    <style>
+
+        .popup {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 10px 30px;
+            color: black;
+        }
+
+        .top {
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        .info {
+            margin-top: 50px;
+        }
+
+    </style>
+    <script>
+        //给定一个值,使点 确定按钮 为 true,点其他为 false
+        var isDelete = false;
+        //显示弹窗函数，设置display为flex
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+　　　 　//关闭弹窗函数，设置display为none，传一个参数，把true和false传进去
+        function hidePopup(x, e) {
+            //处理冒泡，event 的 cancelable 事件返回一个布尔值 
+            // 确定按钮有event参数，不会返回undefined（因为取消和其他区域，没传值 默认undefined）
+            if (e != undefined) {
+                e.cancelBubble = true;
+            }
+            document.getElementById("popup").style.display = "none";
+            isDelete = x;
+            console.log(x);
+        }
+    </script>
+</head>
+<body>
+<!--给定一个按钮来显示弹窗-->
+<button type="button" onclick="showPopup()">弹窗</button>
+
+<!--给出弹窗的内容-->
+<!--弹窗点击除 确定按钮 以外的 取消和其他区域 时弹窗都会消失且输出false，点击 确定按钮 时为true-->
+<div class="popup" id="popup" onclick="hidePopup(false)">
+    <div class="popup-content">
+        <div class="top">
+            <p>提示信息</p>
+        </div>
+        <div class="info">
+            <p>确认关闭？</p>
+        </div>
+        <div class="btn">
+            <!--因为两个按钮在popup这个大框里，点击确定和取消就会同时点击父元素，会产生事件冒泡（即点击确定，会同时出现true和false）-->
+            <button type="button" onclick="hidePopup(true,event)">确定</button>
+            <button type="button" onclick="hidePopup(false)">取消</button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

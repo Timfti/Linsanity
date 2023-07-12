@@ -1,0 +1,345 @@
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+body {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #000000;
+    line-height: 20px;
+    text-align: left;
+}
+
+td, th {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #000000;
+}
+
+a {
+    color: #000000;
+}
+
+A:link {
+    TEXT-DECORATION: none;
+}
+
+A:visited {
+    TEXT-DECORATION: none;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.clearit {
+    clear: both;
+}
+
+.top {
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    background: #8c222c;
+    line-height: 38px;
+}
+
+.to {
+    width: 1000px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.to p {
+    width: 200px;
+    float: left;
+    color: #dfc2c0;
+    text-align: center
+}
+
+.to ul {
+    width: 800px;
+    float: right
+}
+
+.to li {
+    width: 100px;
+    float: right;
+    text-align: center
+}
+
+.to a {
+    color: #dfc2c0;
+}
+
+.to A:hover {
+    color: #FFF;
+}
+
+.lg {
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    background: #f2f1ea;
+}
+
+.logo {
+    width: 400px;
+    float: left;
+    text-align: center;
+}
+.logo a {
+    font-size: 30px;
+    color: black;
+    margin-top: 46px;
+    display:block;
+}
+.logo a:hover {
+    color:red;
+}
+
+.sou {
+    width: 600px;
+    float: left;
+}
+
+.sou input {
+    width: 450px;
+    height: 35px;
+    float: left;
+    margin-left: 50px;
+    border: 2px solid#8c222c;
+    margin-top: 35px;
+}
+
+.sou p {
+    width: 70px;
+    float: left;
+    height: 39px;
+    background: #8c222c;
+    margin-top: 35px;
+    text-align: center;
+    line-height: 39px
+}
+
+.sou span.search {
+    font-size: 14px;
+}
+
+.dao {
+    width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+}
+
+.dao li {
+    width: 150px;
+    float: left;
+    margin-left: 10px;
+}
+
+.dao a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dao A:hover {
+    color: #666;
+}
+
+.nav {
+    width: 100%;
+    background: #f7f7f6;
+}
+
+.da {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.foot {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 70px;
+    background: #8c222c;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    width: 410px;
+    margin: 0 auto;
+}
+
+.login-form .login-item {
+    overflow: hidden;
+    height: 90px;
+}
+
+.login-form .login-item .filename {
+    float:left;
+    width: 100px;
+    line-height: 50px;
+    padding: 20px 0;
+}
+.login-form .login-item .value {
+    float: left;
+    width: 300px;
+    height: 50px;
+    padding: 20px 0;
+}
+
+.login-form .login-item .value .input {
+    width: 298px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #CCC;
+}
+
+.btn-list {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.btn-list a, .btn-list button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #8c222c;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    color: #FFF
+}
+
+.lingshi {
+    margin-top: 20px;
+}
+
+.lingshi h2 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #999;
+    line-height: 30px;
+    text-indent:10px;
+    margin-bottom:10px;
+}
+
+.lingshi li {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+.lingshi .zuo {
+    padding:10px 0;
+}
+.lingshi samp {
+    color: #999;
+}
+
+.lingshi span {
+    font-size: 14px;
+    color: #bf7f5f;
+}
+
+.hao {
+    margin-top: 20px;
+}
+
+.hao h2 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #999;
+    line-height: 30px;
+    text-indent:10px;
+    margin-bottom:10px;
+}
+
+.hao li {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+.hao .zuo {
+    padding:10px 0;
+}
+.hao samp {
+    color: #999;
+}
+
+.hao span {
+    font-size: 14px;
+    color: #bf7f5f;
+}
+
+.path {
+    overflow:hidden;
+    color:white;
+    background:#8c222c;
+}
+.path .item {
+    float:left;
+    margin:15px;
+}
+
+.condition td {
+    line-height:50px;
+}
+.input {
+    height:30px;
+}
+.btncss {
+    border:none;
+    display:inline-block;
+    background:#8c222c;
+    color:white;
+    width:100px;
+    line-height:30px;
+    text-align:center;
+    font-size:14px;
+    cursor:pointer;
+}
+.main-form {
+    padding:20px 0;
+    background:#deddee;
+}
+.main-form table {
+}
+.main-form table td{
+    padding:20px 0;
+}
+
+.tableData {
+    text-align:center;
+    margin:20px 0;
+    border-left:1px solid #ccc;
+    border-top:1px solid #ccc;
+}
+.tableData th{
+    line-height:40px;
+    background:#dedede;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.tableData td{
+    line-height:50px;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+}

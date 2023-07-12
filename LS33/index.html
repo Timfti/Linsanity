@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap" ">
+    <title>Pclock</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            font-family: 'M PLUS Rounded 1c', sans-serif
+        }
+
+        .Pclock {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+        #clock {
+            width: 200px;
+            height: 200px;
+            background-color: #f44438;
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0px 0px 35px rgb(214 0 0 / 50%);
+            transition: 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .25s ease-in-out;
+        }
+
+        @keyframes shock {
+            0% {
+                transform: rotate(0deg)
+            }
+            25% {
+                transform: rotate(-5deg)
+            }
+            65% {
+                transform: rotate(5deg)
+            }
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 90px;
+            color: #fff;
+        }
+
+        #sec {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        #startBtn {
+            z-index: 10;
+            color: #f44438;
+        }
+
+        #startBtn, #resetBtn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            padding: 8px 15px;
+            background-color: #fff;
+            border-top-left-radius: 25px;
+            color: #f44438;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Pclock">
+        <div id="clock">
+            <h1 id="min">25</h1><span id="sec">.00</span>
+            <div id="startBtn" onclick="start()">Start</div>
+            <div id="resetBtn" onclick="reset()">Reset</div>
+        </div>
+    </div>
+    <script>
+    var maxTime = 25 * 60;
+    var setTime = maxTime;
+
+    function start() {
+        document.getElementById('startBtn').style.display = 'none';
+        timer = setInterval("startTime()", 1000);
+    };
+
+    function reset() {
+        document.getElementById('startBtn').style.display = 'block';
+        document.all["min"].innerHTML = Math.floor(setTime / 60);
+        if (Math.floor(setTime % 60) < "10") {document.all["sec"].innerHTML = "." + "0" + Math.floor(setTime % 60);} 
+        else if (Math.floor(setTime % 60) == "0") {document.all["sec"].innerHTML = "." + Math.floor(setTime % 60) + "0"}
+        else {document.all["sec"].innerHTML = "." + Math.floor(setTime % 60);};
+        clearInterval(timer);
+    };
+
+    function startTime () {
+        if (maxTime >= 0) {
+            minutes = Math.floor(maxTime / 60);
+            seconds = Math.floor(maxTime % 60);
+            document.all["min"].innerHTML = minutes;
+            if (seconds < "10") {document.all["sec"].innerHTML = "." + "0" + seconds;} 
+            else if (seconds == "0") {document.all["sec"].innerHTML = "." + seconds + "0"}
+            else {document.all["sec"].innerHTML = "." + seconds;};
+            --maxTime;
+        } else {
+            document.getElementById('clock').style.backgroundColor="#87AAC4";
+            document.getElementById('clock').style.boxShadow="0px 0px 35px rgba(135, 170, 196,0.7)";
+            document.getElementById('startBtn').style.display = 'block';
+            document.getElementById('startBtn').style.color="#87AAC4";
+            document.getElementById('clock').style.animation="shock .25s infinite";
+            setTimeout(function () {rest();},5000);
+        };
+    };
+
+    function rest () {
+        maxTime = 10 * 60;
+        setTime = maxTime;
+        document.getElementById('clock').style.animation="none";
+        document.getElementById('clock').style.backgroundColor="#f44438";
+        document.getElementById('clock').style.boxShadow="0px 0px 35px rgb(214 0 0 / 50%)";
+        document.getElementById('startBtn').style.display = 'none';
+        document.getElementById('startBtn').style.color="#f44438";
+    }
+    </script>
+</body>
+</html>

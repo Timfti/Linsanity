@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <style>
+        .box{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="/user" method="post">
+            <input type="submit" value="抽奖" style="color: #fff; text-decoration: none; background: #232323; padding: 5px; border-radius: 16px; width: 5vw;">
+        </form>
+        {{text}}
+        <form action="/users" method="post">          
+            <input type="text" name="geter">
+            <input type="submit" value="添加" style="color: #fff; text-decoration: none; background: #333; padding: 5px; border-radius: 16px; width: 5vw;">
+        </form>
+    </form>
+
+    </div>
+</body>
+</html>

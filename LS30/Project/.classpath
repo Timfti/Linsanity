@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="WebContent/WEB-INF/lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/commons-fileupload-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/mysql-connector-java-5.1.49.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/jackson-annotations-2.2.3.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="D:/工作/3.产品线/1.软件代做/代码/2.后端/4.定制/java/在线考试/tb865074846/Project/WebContent/WEB-INF/lib/jackson-databind-2.2.3.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

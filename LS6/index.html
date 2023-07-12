@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .loading-div {
+      width: 1800px;
+      height: 720px;
+      background-color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      color: #555;
+      overflow: hidden;
+      text-align: center;
+    }
+    .loading-div::before {
+      display: inline-block;
+      vertical-align: middle;
+    } 
+    </style>
+</head>
+<body>
+    <div class="loading-div">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="main">
+      这里是网页内容
+    </div>
+    <script>
+        //注释部分是设置2秒的定时延迟，timeout结束后加载网页
+            //setTimeout(() => {
+                // $(".loading-div").hide();
+                //$('body').css('overflow-y','scroll');
+            // }, 2000);
+        //这是根据js判断，页面加载完毕就显示
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {    
+                $(".loading-div").hide();
+                $('body').css('overflow','scroll');
+            }
+        }
+    </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</body>
+</html>

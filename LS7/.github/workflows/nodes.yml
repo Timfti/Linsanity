@@ -1,0 +1,16 @@
+name: deploy github page
+on: 
+  push:
+   branches:
+     - main
+jobs:
+  main: 
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2 
+    - name: deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+       branch: gh-pages
+       folder: .

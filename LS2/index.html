@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="https://lh1.hetaousercontent.com/static/8e8fffbf0dcf6137"> -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>常用网址</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: #fff;
+        }
+
+        a:visited {
+            color: #ffffff99;
+        }
+
+        a:active {
+            color: #ffffff99;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        body{
+            background: url('https://www.houdunren.com/images/login.jpeg');
+            background-position-x: center;
+        }
+
+        ::-webkit-scrollbar {
+            background: url('https://www.houdunren.com/images/login.jpeg');
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(1 2 3 / 40%);
+            border-radius: 10px;
+        }
+
+        /* .bodyer{
+            height: 30vh;
+        } */
+
+        .header{
+            background-color: #efeeee;
+            box-shadow: rgb(0 0 0) 0 0 50px;
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            transition: 0.3s;
+            justify-content: space-between;
+        }
+
+        .logo{
+            display: inline-flex;
+            animation-name: logo;
+            animation-duration: 1s;
+            align-items: center;
+            margin: 0;
+        }
+
+        @keyframes logo {
+            25% {
+                opacity: 0;
+                margin-left: -20vh;
+            }
+
+            65% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .logo>a{
+            text-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+            user-select: none;
+            margin-left: 10px;
+            transition: .2s;
+            font-size: 25px;
+            color: #333;
+        }
+
+        .logo>a:hover{
+            font-size: 25.5px;
+        }
+
+        @keyframes topbar {
+            25%{
+                opacity: 0;
+                margin-left: 20px;
+            }
+        }
+
+        .search-box {
+            transition: .25s;
+            border-radius: 40px;
+            padding: 10px;
+            color: rgba(255, 255, 255, .8);
+            box-shadow: rgb(0 0 0 / 35%) 0 0 10px;
+            display: flex;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .search-txt {
+            transition: .25s;
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: #333;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 25px;
+            width: 20vw;
+        }
+
+        .search-btn {
+            transition: .25s;
+            float: right;
+            width: 25px;
+            height: 24px;
+            border-radius: 50%;
+            backdrop-filter: blur(0px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            pointer-events: unset;
+        }
+
+        #btnSearchEng {
+            left: 5px;
+            transition: .25s;
+            color: rgba(0, 0, 0, .5);
+        }
+
+        #home{
+            border-bottom: 2px solid #333;
+            color: #333;
+            padding: 5px;
+        }
+
+        .coverblur{
+            background-color: rgba(0, 0, 0, .25);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            animation-name: blur;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes blur {
+            25% {
+
+                opacity: 1;
+                transform: scale(1.7);
+            }
+
+            65% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        .begin{
+            display: block;
+        }
+
+        .begin>h1{
+            text-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+            user-select: none;
+            margin-top: 15%;
+            font-size: 35px;
+            color: #fff;
+            text-align: center;
+            transition: .25s;
+            animation-name: swift-up;
+            animation-duration: 1s;
+            position: absolute;
+            left: 50%;
+            top: 11.5vw;
+            transform: translate(-50%, -50%);
+        }
+
+        .description {
+            text-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+            color: #dadada;
+            font-weight: inherit;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 40px;
+            user-select: none;
+            text-align: center;
+            position: relative;
+            animation: .5s swift-up ease-out forwards, .5s fade-in ease-out forwards;
+            animation-delay: .8s;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .navbar{
+            margin-left: 15vw;
+            user-select: none;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .navbar li {
+            position: relative;
+        }
+        
+        .navbar > ul > li {
+            white-space: nowrap;
+            padding: 10px 0 10px 24px;
+        }
+        
+        .navbar a, .navbar a:focus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "Poppins", sans-serif;
+            color: #232E3CB3;
+            font-size: 14px;
+            padding: 0 4px;
+            white-space: nowrap;
+            transition: 0.3s;
+            letter-spacing: 0.4px;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .navbar a i, .navbar a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+
+        .navbar > ul > li > a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #333;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+            color: #232E3CB3;
+        }
+
+        .navbar .dropdown ul {
+            display: block;
+            position: absolute;
+            left: 24px;
+            top: calc(100% + 30px);
+            margin: 0;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+            transition: 0.3s;
+        }
+
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-size: 14px;
+            text-transform: none;
+            color: #666666;
+        }
+
+        .navbar .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover>a {
+            color: #000;
+        }
+        
+        .navbar .dropdown:hover > ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+
+        .navbar .dropdown .dropdown ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+        }
+        
+        .navbar .dropdown .dropdown:hover > ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+        }
+
+        @media (max-width: 1366px) {
+            .navbar .dropdown .dropdown ul {
+                left: -90%;
+            }
+
+            .navbar .dropdown .dropdown:hover > ul {
+                left: -100%;
+            }
+        }
+
+        footer{
+            bottom: 0;
+            width: 100%;
+            line-height: 3rem;
+            text-align: center;
+            transition: .25s;
+            background-color: #151515;
+            color: #b4b4b4;
+        }
+
+        .coverbox{
+            bottom: 100%;
+            height: 300px;
+            width: 100%;
+            left: 0;
+            z-index: 1;
+            background: linear-gradient(to top, #151515, transparent);
+        }
+
+        .content{
+            display: none;
+        }
+
+        .topMenu{
+            display: none;
+            color: #333;
+            margin: auto 20px;
+            font-size: 35px;
+        }
+
+        .menu-box {
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            height: 100%;
+            padding: 15px 0px 2.92vw 20px;
+            animation-name: nbx;
+            animation-duration: 1s;
+            background-color: #dddddd;
+        }
+
+        @keyframes nbx {
+            25%{
+                padding-left: 60px;
+            }
+        }
+
+        .menu-box input[type='checkbox'] {
+            display: none;
+        }
+
+        .menu {
+            font-size: 18px;
+            width: 220px;
+            min-height: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            transition: width 0.2s;
+            color: #2c3e50;
+            user-select: none;
+        }
+
+        .menu-box>input#menu-btn:checked~.menu {
+            width: 0;
+        }
+
+        .menu-item>label{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-radius: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.2s;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* 选项，若 n 项，就 n * 40px */
+        .menu-item>input#menu-item1:checked~.menu-content {
+            height: calc(3 * 40px);
+        }
+
+        .menu-item>input#menu-item2:checked~.menu-content {
+            height: calc(2 * 40px);
+        }
+
+        .menu-item>input#menu-item3:checked~.menu-content {
+            height: calc(3 * 40px);
+        }
+
+        .menu-item>input#menu-item4:checked~.menu-content {
+            height: calc(3 * 40px);
+        }
+
+        .menu-content>span {
+            width: 100%;
+            text-indent: 20px;
+            line-height: 40px;
+            border-radius: #2c3e50;
+        }
+
+        .menu-content>span:hover {
+            background-color: #ececec;
+            color: #000;
+        }
+
+        .set-line {
+            margin: 20px 0 10px 0;
+            width: 100%;
+            height: 2px;
+            background-color: #d3d3d3;
+        }
+
+        .text{
+            background-color: #ececec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-content>a{
+            color: #151515;
+        }
+
+        #dp1{
+            background-color: #fa5;
+        }
+
+        #dp2{
+            background-color: #ee5;
+        }
+
+        #dp3{
+            background-color: #5e5;
+        }
+
+        #dp4{
+            background-color: #5cf;
+        }
+
+        .clocks {
+            height: 500px;
+            margin: 20vh auto;
+            position: relative;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div data-v-4fced2a0="" class="markdown-body">
+    <div class="header">
+        <div class="logo"><a href="index.html">平安内网</a></div>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <a href="index.html" id="home">首页</a>
+                <li class="dropdown"><a href="#"><span>公共</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul id="dp1">
+                        <!-- href="http://pws.paic.com.cn/m" 这个#替换为网址 例如:http://baidu.com/  -->
+                        <li><a href="http://ifin-emp.paic.com.cn"  target=" _blank" id="li1">财智云</a></li>
+                        <li><a href="http://oas-neoa.paic.com.cn/oas-neoa/index.html"   target=" _blank" id="li2">文件处理系统EOA</a></li>
+                        <li><a href="http://papms-core.paic.com.cn/index.jsp"   target=" _blank" id="li3">采购管理E平台</a></li>
+                        <li><a href="http://pass.paic.com.cn/pass/getMenu.do"   target=" _blank" id="li4">印章系统</a></li>
+                        <li><a href="http://pws.paic.com.cn/m/zhanghaoguangli/um.html"   target=" _blank" id="li5">账号管理</a></li>
+                        <li><a href="http://itsmportal.paic.com.cn/menuShow.do"   target=" _blank" id="li6">问题管理系统</a></li>
+                        <li><a href="http://pws.paic.com.cn/m/youjianchuli/Mail.html?s=1"  target=" _blank"  id="li7">邮件处理</a></li>
+                        <li><a href="http://pacp-core.paic.com.cn/pacp-core/index.do"   target=" _blank" id="li8">平安统一协作平台</a></li>
+                        <li><a href="http://pshr.paic.com.cn/"  target=" _blank"  id="li9">PeopleSoft 系统</a></li>
+                        <li><a href="http://plan-group.paic.com.cn/plan-core/plan.common.role.do"  target=" _blank"  id="li10">集团预算系统</a></li>
+                        <li><a href="http://ilc.paic.com.cn/icmp-slcp-eids-web#/home/baseIndex"   target=" _blank" id="li11">员工信息申报系统</a></li>
+                        <li><a href="http://sl-gl.paic.com.cn/account/index.html#/login?lang=zh-CN"   target=" _blank" id="li12">平安i法智管</a></li>
+                        <li><a href="http://awbs.paic.com.cn/cr/index.do"   target=" _blank" id="li13">法律合规评审管理</a></li>
+                        <li><a href="http://sl-gl.paic.com.cn/account/index.html#/index?flag=1"  target=" _blank"  id="li14">平安好律师</a></li>
+                        <li><a href="http://mailtrack.paic.com.cn/"   target=" _blank" id="li15">外网邮件自助追踪系统</a>  </li>
+                        <li><a href="http://pafile.pingan.com.cn/accounts/login/"   target=" _blank" id="li16">大文件外发平台</a></li>
+                        <li><a href="http://lcloud-elis-rms.paic.com.cn/#/"   target=" _blank" id="li17">寿险风险管理系统（RMS）</a></li>
+                        <li><a href="http://eip-snims.pingan.com.cn/snims/"  target=" _blank"  id="li18">寿险制度管理系统</a></li>
+                        <li><a href="http://sec2know.paic.com.cn/login"  target=" _blank"  id="li19">安全意识平台</a></li>
+                        <li><a href="http://dcloud.pingan.com.cn/#/login"   target=" _blank" id="li20">平安云桌面</a></li>
+                        <li><a href="http://psvc.paic.com.cn/web/index.html#/HomePage"  target=" _blank"  id="li21">会议预定管理平台</a></li>
+                        <li><a href="http://um-selservice.paic.com.cn/um-selservice/"   target=" _blank" id="li22">用户权限清理系统</a></li>
+                        <li><a href="http://svcm.paic.com.cn/svcm/login.do"   target=" _blank" id="li23">电子会议预定系统</a></li>
+                        <li><a href="http://elis-sis.paic.com.cn/usermanagement.logon.do"   target=" _blank" id="li24">物流管理系统（ELIS-LMS）</a></li>
+                        <li><a href="http://lvms.paic.com.cn/newlvms/"   target=" _blank" id="li25">单证管理系统</a></li>
+                        <li><a href="http://inv-veri.chinatax.gov.cn/index.html"  target=" _blank"  id="li26">发票查验平台</a></li>
+                        <li><a href="http://um-selfservice.paic.com.cn/um-selfservice/mainFrame.html"   target=" _blank" id="li27">平安用户权限管理系统</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>后援-共同资源</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul id="dp2">
+                        <li><a href="http://elis-pos.paic.com.cn/elisposweb/"  target=" _blank" >集中保全系统ElIS-POS</a></li>
+                        <li><a href="http://elis-uws.paic.com.cn/indexpage.jsp"  target=" _blank" >集中录单核保理赔系统（ELIS）</a></li>
+                        <li><a href="http://lcloud-csp-isms.paic.com.cn/"  target=" _blank" >智享服务管理平台</a></li>
+                        <li><a href="http://elis-ips.paic.com.cn"  target=" _blank" >人身险调查系统（IPS）</a></li>
+                        <li><a href="http://pacas-super.paic.com.cn/cas/PA001/CMS_CDS/login"  target=" _blank" >出纳工作平台（CDS）</a></li>
+                        <li><a href="http://elis-rbs.paic.com.cn/rbs.common.userlogin.screen"  target=" _blank" >个人寿险续期系统（ELIS）</a></li>
+                        <li><a href="http://elis-csts.paic.com.cn/"  target=" _blank" >客户服务追踪系统（ELIS-CSTS）</a></li>
+                        <li><a href="http://elis-las.paic.com.cn/"  target=" _blank" >个人寿险财务系统（ELIS-LAS）</a></li>
+                        <li><a href="http://lcloud-ifp-fds-gl-prd-web-padis.paic.com.cn/#/login"  target=" _blank" >财务综合系统</a></li>
+                        <li><a href="http://crsp-core.paic.com.cn/crsp-core/"  target=" _blank" >寿险财务风险管理系统</a></li>
+                        <li><a href="http://elis-oms.paic.com.cn/asset/wp/login2.jsp"  target=" _blank" >职场管理系统</a></li>
+                        <li><a href="http://pafms.paic.com.cn/OA_HTML/AppsLocalLogin.jsp"  target=" _blank" >OF系统</a></li>
+                        <li><a href="http://pacas-super.paic.com.cn/cas/PA001/VMS_CORE_ELIS/login"  target=" _blank" >增值税管理系统（寿险）</a></li>
+                        <li><a href="http://eip-bmms.paic.com.cn/bmms/do/web/common/login.do"  target=" _blank" >品牌销售管理系统</a></li>
+                        <li><a href="http://djgl-core.paic.com.cn/#/home"  target=" _blank" >平安智慧建党</a></li>
+                        <li><a href="http://sks-sx.pa18.com/SKServer/"  target=" _blank" >税控服务器管理系统</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>前线</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul id="dp3">
+                        <li><a href="http://elis-lcs.paic.com.cn/"  target=" _blank" >销售支持管理系统（ELIS-LCS）</a></li>
+                        <li><a href="http://pacas-super.paic.com.cn/PA002/PSS_AFCS/login"  target=" _blank" >早夕会管理系统（PSS-AFCS）</a></li>
+                        <li><a href="http://pacas-super.paic.com.cn/PA002/EDW_LDM/login"  target=" _blank" >智能客户销售平台（ACMP）</a></li>
+                        <li><a href="http://sws.paic.com.cn/usercenter/view/login.html"  target=" _blank" >前线内勤工作平台</a></li>
+                        <li><a href="http://tmsv2-core.paic.com.cn/"  target=" _blank" >寿险培训管理系统（New）</a></li>
+                        <li><a href="http://lbdp-ims-ngx-bx-prd-web-padis.paic.com.cn/#/"  target=" _blank" >捷报智慧经营平台</a></li>
+                        <li><a href="https://pacas-super.paic.com.cn/cas/PA002/ELIS_SMP_CMS_PADIS/login"  target=" _blank" >平安金管家内容管理系统</a></li>
+                        <li><a href="https://lbis-bims-nginx-backstage-web-gm-padis.paic.com.cn"  target=" _blank" >寿险银保内勤作业平台</a></li>
+                        <li><a href="http://pacas.paic.com.cn/cas/PA021/PSCP_CORE_SUPER/login"  target=" _blank" >短信平台核心服务</a></li>
+                        <li><a href="https://cyjlpt.iaf.org.cn/rsadmin.php?r=index%2Flogin"  target=" _blank" >人身险从业人员记录平台（BIMS）</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>IT</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul id="dp4">
+                        <li><a href="http://cnsz020510/reports/repoer/MyKPI"  target=" _blank" >Edesk-MyKPI</a></li>
+                        <li><a href="http://imms-core.paic.com.cn/"  target=" _blank" >资产管理系统IMMS</a></li>
+                        <li><a href="http://srvbot.paic.com.cn/"  target=" _blank" >Srvbot运维平台</a></li>
+                        <li><a href="http://ucmdb.paic.com.cn/"  target=" _blank" >UCMDB配置管理平台</a></li>
+                        <li><a href="http://lops.paic.com.cn/nlms/#/login"  target=" _blank" >办公技术BOIS</a></li>
+                        <li><a href="http://docshare.paic.com.cn/sites/bois/SitePages/%E4%B8%BB%E9%A1%B5.aspx"  target=" _blank" >镜像同步状态</a></li>
+                        <li><a href="http://itdocshare.pingan.com.cn/sites/service/Deskhelp%20Technical%20Management%20Team/ossync/SitePages/%E4%B8%BB%E9%A1%B5.aspx"  target=" _blank" >Intelligent Network</a></li>
+                        <li><a href="http://10.147.9.233/index.html#TO=UTTL-MON"  target=" _blank" >视频会议</a></li>
+                        <li><a href="http://10.147.9.88/"  target=" _blank" >HP公章打印机</a></li>
+                        <li><a href="http://10.147.9.244/doc/page/preview.asp"  target=" _blank" >管理职场监控</a></li>
+                        <li><a href="http://itims.paic.com.cn/"  target=" _blank" >哨兵系统</a></li>
+                        <li><a href="http://10.147.8.232/paxx/login.html"  target=" _blank" >UPS管理平台</a></li>
+                        <li><a href="http://laip-vas.paic.com.cn/bvas/temp/get_hb_image_time?code=11002375"  target=" _blank" >监控轮巡</a></li>
+                        <li><a href="http://cnsh021671:8090/crackreport/showstatisticsByTimesDetail?username=&beginTime=&endTime="  target=" _blank" >内部网账号锁定查询</a></li>
+                        <li><a href="http://sam.paic.com.cn/#/home"  target=" _blank" >软件资产管理系统</a></li>
+                        <li><a href="http://10.147.9.233/index.html#t0=util-tool-mon"  target=" _blank" >视频会议系统</a></li>
+                        <li><a href="http://626888.paic.com.cn/#/main/index"  target=" _blank" >办公技术626888</a></li>
+                        <li><a href="http://evalias.paicdom.local/enterprisevault/search/shell.aspx"  target=" _blank" >归档邮件搜索</a></li>
+                        <li><a href="http://ors.paic.com.cn/login"  target=" _blank" >ORS运营商资源系统</a></li>
+                        <li><a href="http://edesk/"  target=" _blank" >PC标装化补助系统</a></li>
+                    </ul>
+                </li>
+                <!-- 链接结束 -->
+            </ul>
+        </nav>
+        <div class="search-box" id="box">
+            <input class="search-txt" type='search' id="inp" name="word" size="30" placeholder="搜索" autocomplete="off" />
+            <svg <input class="search-btn" type='button' id='btn' viewBox="0 0 1100 1000" width="30px"><path d="M424.024 766.098c-91.619 0-177.754-35.679-242.538-100.464-133.735-133.737-133.735-351.344 0-485.078 64.784-64.784 150.919-100.462 242.538-100.462s177.754 35.677 242.539 100.462c133.733 133.735 133.735 351.34 0 485.078-64.785 64.783-150.922 100.464-242.539 100.464zM424.024 196.085c-60.637 0-117.643 23.613-160.523 66.489-88.512 88.51-88.51 232.53 0 321.040 42.876 42.876 99.885 66.491 160.523 66.491s117.643-23.614 160.523-66.491c88.51-88.51 88.51-232.53 0-321.040-42.876-42.876-99.885-66.489-160.523-66.489z"fill="#333" id="1176"></path><path d="M886.838 943.904c-14.842 0-29.684-5.663-41.010-16.986l-261.286-261.285c-22.647-22.649-22.647-59.369 0-82.018 22.647-22.647 59.37-22.647 82.018 0l261.286 261.286c22.647 22.649 22.647 59.369 0 82.018-11.325 11.322-26.167 16.985-41.010 16.985z"fill="#333" id="1177"></path>
+            <div class="searchBarBtn" id="btnSearchEng"><i id="iconSearchEng"></i></div>
+        </div>
+    </div>
+</div>  
+    </div>
+    <div class="clocks">
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+    <div class="bodyer" id="bodyer">
+        <div class="begin" id="begin">
+            <h1>常用网址</h1>
+        </div>
+    </div>
+</section>
+    <div class="coverbox" id="coverbox"></div>
+    <footer id="footer">©2022 林富强</footer>
+    <div class="coverblur" id="coverblur"></div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // inner variables
+        var canvas, ctx;
+        var clockRadius = 250;
+        var clockImage;
+
+        // draw functions :
+        function clear() { // clear canvas function
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        }
+
+        function drawScene() { // main drawScene function
+            clear(); // clear canvas
+
+            // get current time
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            hours = hours > 12 ? hours - 12 : hours;
+            var hour = hours + minutes / 60;
+            var minute = minutes + seconds / 60;
+
+            // save current context
+            ctx.save();
+
+            // draw clock image (as background)
+            ctx.drawImage(clockImage, 0, 0, 500, 500);
+
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.beginPath();
+
+            // draw numbers
+            ctx.font = '36px Arial';
+            ctx.fillStyle = '#000';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            for (var n = 1; n <= 12; n++) {
+                var theta = (n - 3) * (Math.PI * 2) / 12;
+                var x = clockRadius * 0.7 * Math.cos(theta);
+                var y = clockRadius * 0.7 * Math.sin(theta);
+                ctx.fillText(n, x, y);
+            }
+
+            // draw hour
+            ctx.save();
+            var theta = (hour - 3) * 2 * Math.PI / 12;
+            ctx.rotate(theta);
+            ctx.beginPath();
+            ctx.moveTo(-15, -5);
+            ctx.lineTo(-15, 5);
+            ctx.lineTo(clockRadius * 0.5, 1);
+            ctx.lineTo(clockRadius * 0.5, -1);
+            ctx.fill();
+            ctx.restore();
+
+            // draw minute
+            ctx.save();
+            var theta = (minute - 15) * 2 * Math.PI / 60;
+            ctx.rotate(theta);
+            ctx.beginPath();
+            ctx.moveTo(-15, -4);
+            ctx.lineTo(-15, 4);
+            ctx.lineTo(clockRadius * 0.8, 1);
+            ctx.lineTo(clockRadius * 0.8, -1);
+            ctx.fill();
+            ctx.restore();
+
+            // draw second
+            ctx.save();
+            var theta = (seconds - 15) * 2 * Math.PI / 60;
+            ctx.rotate(theta);
+            ctx.beginPath();
+            ctx.moveTo(-15, -3);
+            ctx.lineTo(-15, 3);
+            ctx.lineTo(clockRadius * 0.9, 1);
+            ctx.lineTo(clockRadius * 0.9, -1);
+            ctx.fillStyle = '#0f0';
+            ctx.fill();
+            ctx.restore();
+
+            ctx.restore();
+        }
+
+        // initialization
+        $(function(){
+            canvas = document.getElementById('canvas');
+            ctx = canvas.getContext('2d');
+
+            // var width = canvas.width;
+            // var height = canvas.height;
+
+        clockImage = new Image();
+        clockImage.src = 'https://static.runoob.com/images/mix/125855_nnla_89964.png';
+
+            setInterval(drawScene, 1000); // loop drawScene
+        });
+    </script>
+</body>
+</html>

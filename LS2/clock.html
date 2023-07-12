@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text">
+<div data-v-4fced2a0="" class="markdown-body">
+  <section data-v-4fced2a0=""><h1 id="Hello">Hello</h1>
+    <h2>hello1</h2>
+    <h2>hello2</h2>
+    <p><code>&lt;span&gt;<span>{{</span>sss<span>}}</span>&lt;/span&gt;</code></p>
+    <blockquote><p>This is test.</p></blockquote>
+    <ul>
+      <li>How are you?</li>
+      <li>Fine, Thank you, and you?</li>
+      <li>I'm fine， too. Thank you.</li>
+      <li>
+        ??????????????????????????????????????????????????????????????????????????????
+      </li>
+    </ul>
+    <h1 id="最新消息">最新消息</h1>
+  </section>
+</div>
+
+<script>
+  (function () {
+
+    var input = document.getElementsByTagName('input')[0]
+    var origin = document.getElementsByClassName('markdown-body')[0].innerHTML;
+
+    input.addEventListener('keyup', function () {
+      var searchKey = input.value
+      console.log('keyup', searchKey)
+      
+      document.getElementsByClassName('markdown-body')[0].innerHTML =
+        origin.replace(searchKey, '<span class=\'highlight\'>' + searchKey + '</span>')
+    })
+
+
+  }())
+</script>
+</body>
+</html>

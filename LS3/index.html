@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        input{
+            background:none;  
+            outline:none;  
+            border:none;
+        }
+        .cen{
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            /* 垂直居中 */
+            position:absolute;
+            left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            font-size: 30px;
+        }
+        .i_view{
+            width: 330px;
+            margin-right: 10px;
+            height:  80px;
+            line-height: 80px;
+            padding-left:  20px;
+            font-size: 30px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .cen input::-webkit-input-placeholder {
+            color:#ccc;
+            font-size: 20px;
+            text-align: left;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            outline: none;
+        }
+            
+        .btn{
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #7FCFF7;
+            background-color: #7FCFF7;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .mb{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cen">
+        <input id="value" type="text" placeholder="请输入" class="i_view"/>px
+        <button onclick="change()" class="btn">转换</button>
+        <div id="value0" class="mb"></div>
+        <div id="value1"></div>
+    </div>
+    
+</body>
+</html>
+<script>
+    function change(){
+        let widthVal = Number(document.getElementById('value').value);
+        let nowVW = widthVal/(1920/100);
+        let nowVH = widthVal/(1080/100);
+        document.getElementById('value0').innerText = 'vw结果：'+nowVW.toFixed(2)+'vw';
+        document.getElementById('value1').innerText = 'vh结果：'+nowVH.toFixed(2)+'vh';
+    }
+</script>

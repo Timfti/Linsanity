@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"   
+    xmlns="http://java.sun.com/xml/ns/javaee"   
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">  
+  <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>AdminServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.AdminServlet</servlet-class>  
+  </servlet>  1672367552000.png
+  <servlet-mapping>  
+    <servlet-name>AdminServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/AdminServlet</url-pattern>  
+   </servlet-mapping>  
+   
+     <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>XueShengServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.XueShengServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>XueShengServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/XueShengServlet</url-pattern>  
+   </servlet-mapping> 
+    
+     <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>XiServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.XiServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>XiServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/XiServlet</url-pattern>  
+   </servlet-mapping>  
+   
+     <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>KeChengServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.KeChengServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>KeChengServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/KeChengServlet</url-pattern>  
+   </servlet-mapping>  
+      
+     <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>JiaoShiServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.JiaoShiServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>JiaoShiServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/JiaoShiServlet</url-pattern>  
+   </servlet-mapping>  
+   
+     <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>CjServlet</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>servlet.CjServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>CjServlet</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/ProductSellSys/CjServlet</url-pattern>  
+   </servlet-mapping>  
+</web-app>  

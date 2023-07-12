@@ -1,0 +1,12 @@
+{
+	"main": "index.html",
+	"logo": "logo.png",
+	"preload": "preload.js",
+	"features": [
+		{
+            "code": "Drawing在线画板",
+            "explain": "Drawing在线画板 Drawing",
+			"cmds":["Drawing在线画板", "Drawing", "drawing", "draw ", "画板", "在线画板"]
+		}
+	]
+}
